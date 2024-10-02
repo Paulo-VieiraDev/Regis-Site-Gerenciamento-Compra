@@ -1,0 +1,17 @@
+/* Estilos para inputs e selects */
+input, select {
+    margin-bottom: 15px; /* Espaço abaixo dos campos para separação visual */
+    padding: 12px; /* Espaçamento interno para melhor usabilidade */
+    border: 2px solid var(--color-primary); /* Cor da borda utilizando a cor primária definida */
+    border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para alterações na borda e sombra */
+    font-size: 16px; /* Tamanho da fonte para fácil leitura */
+    width: 100%; /* Largura total do campo para melhor adaptação ao layout */
+    box-sizing: border-box; /* Inclui padding e border na largura total, evitando quebra de layout */
+}
+
+/* Estilos aplicados quando o campo está em foco */
+input:focus, select:focus {
+    border-color: var(--color-warning); /* Cor da borda ao focar, usando a cor de alerta */
+    box-shadow: 0 0 8px rgba(221, 161, 94, 0.5); /* Sombra ao focar para indicar interatividade */
+}

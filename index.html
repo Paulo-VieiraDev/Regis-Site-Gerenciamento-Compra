@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- Define que este é um documento HTML5 e o idioma é português do Brasil -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Define a viewport para dispositivos móveis, garantindo que a página se adapte à tela -->
+    
+    <!-- Links para arquivos CSS que estilizam a página -->
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/buttons.css">
+    <link rel="stylesheet" href="CSS/forms.css">
+    <link rel="stylesheet" href="CSS/tables.css">
+    <link rel="stylesheet" href="CSS/carousel.css"> <!-- CSS específico para o carrossel -->
+    
+    <!-- Link para a biblioteca de ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
     <title>Regis - Gerenciador de Compras</title>
+    <!-- Título que aparecerá na aba do navegador -->
 </head>
 
 <body>
     <div class="container">
+    <!-- Container principal para centralizar e organizar o conteúdo da página -->
+    
         <h1>REGIS <i class="fa-solid fa-cart-shopping"></i></h1>
+        <!-- Título da aplicação com um ícone de carrinho de compras -->
+        
         <div class="description">Seu gerenciador de compras, prático e fácil de usar!</div>
+        <!-- Descrição da aplicação -->
+        
         <div class="grid-container">
+        <!-- Container para as seções organizadas em uma grade -->
+        
             <div class="section">
+            <!-- Seção para adicionar uma nova compra -->
                 <h2>Adicionar Compra</h2>
                 <form id="purchaseForm">
+                <!-- Formulário para entrada de dados da compra -->
                     <input type="text" placeholder="Item" required>
+                    <!-- Campo de texto para o nome do item (obrigatório) -->
+                    
                     <input type="number" placeholder="Valor" required>
+                    <!-- Campo numérico para o valor do item (obrigatório) -->
+                    
                     <input type="text" id="locationInput" placeholder="Onde Comprou" required>
+                    <!-- Campo de texto para o local da compra (obrigatório) -->
+                    
                     <input type="date" required>
+                    <!-- Campo para selecionar a data da compra (obrigatório) -->
+                    
                     <select id="paymentMethod" required>
+                    <!-- Seleção para a forma de pagamento (obrigatório) -->
                         <option value="">Forma de Pagamento</option>
                         <option value="Cartão de Crédito">Cartão de Crédito</option>
                         <option value="Cartão de Débito">Cartão de Débito</option>
@@ -30,12 +64,17 @@
                         <option value="Transferência">Transferência</option>
                         <option value="Pix">Pix</option>
                     </select>
+                    
                     <button type="submit">Adicionar Compra</button>
+                    <!-- Botão para enviar o formulário e adicionar a compra -->
                 </form>
             </div>
+            
             <div class="section">
+            <!-- Seção para filtrar compras -->
                 <h2>Filtrar Compras</h2>
                 <select id="monthFilter">
+                <!-- Seleção para filtrar por mês -->
                     <option value="">Todos os meses</option>
                     <option value="1">Janeiro</option>
                     <option value="2">Fevereiro</option>
@@ -50,10 +89,14 @@
                     <option value="11">Novembro</option>
                     <option value="12">Dezembro</option>
                 </select>
+                
                 <select id="locationFilter">
+                <!-- Seleção para filtrar por localização -->
                     <option value="">Todos os locais</option>
                 </select>
+                
                 <select id="paymentFilter">
+                <!-- Seleção para filtrar por forma de pagamento -->
                     <option value="">Todas as Formas de Pagamento</option>
                     <option value="Cartão de Crédito">Cartão de Crédito</option>
                     <option value="Cartão de Débito">Cartão de Débito</option>
@@ -61,23 +104,66 @@
                     <option value="Transferência">Transferência</option>
                     <option value="Pix">Pix</option>
                 </select>
+                
                 <div class="value-filters">
+                <!-- Div para campos de filtro de valor -->
                     <input type="number" id="minValue" placeholder="Valor Mínimo" class="half-width">
+                    <!-- Campo numérico para valor mínimo -->
                     <input type="number" id="maxValue" placeholder="Valor Máximo" class="half-width">
+                    <!-- Campo numérico para valor máximo -->
                 </div>
+                
                 <div class="filter-buttons">
+                <!-- Div para botões de aplicar/resetar filtros -->
                     <button id="resetFilters">Resetar Filtro</button>
+                    <!-- Botão para resetar os filtros aplicados -->
                     <button id="applyFilters">Aplicar Filtro</button>
+                    <!-- Botão para aplicar os filtros selecionados -->
                 </div>
             </div>
+            
             <div class="section">
+            <!-- Seção para exibir melhores ofertas -->
                 <h2>Melhores Ofertas</h2>
-                <p>Aqui você verá as melhores ofertas disponíveis!</p>
-            </div>
+                <div class="carousel">
+                <!-- Container para o carrossel de ofertas -->
+                    <div class="carousel-inner">
+                    <!-- Container interno que contém os itens do carrossel -->
+                        <div class="carousel-item active">
+                        <!-- Item ativo do carrossel -->
+                            <img src="IMG/Nike.jpg" alt="Nike" class="offer-image">
+                            <!-- Imagem da oferta -->
+                            <p>Tênis Nike</p>
+                            <p class="original-price">De: R$ 599,00</p>
+                            <p class="discounted-price">Por: R$ 499,00</p>
+                            <p class="store-name">Esportiva XYZ</p>
+                        </div>
+                        <div class="carousel-item">
+                        <!-- Outro item do carrossel -->
+                            <img src="IMG/Ps5.jpg" alt="PS5" class="offer-image">
+                            <p>PlayStation 5</p>
+                            <p class="original-price">De: R$ 5.499,00</p>
+                            <p class="discounted-price">Por: R$ 4.999,00</p>
+                            <p class="store-name">Tech Store</p>
+                        </div>
+                        <div class="carousel-item">
+                        <!-- Mais um item do carrossel -->
+                            <img src="IMG/S24-Ultra.jpg" alt="S24 Ultra" class="offer-image">
+                            <p>Samsung Galaxy S24 Ultra</p>
+                            <p class="original-price">De: R$ 6.499,00</p>
+                            <p class="discounted-price">Por: R$ 5.499,00</p>
+                            <p class="store-name">Mobile Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>                                               
         </div>
+        
         <div id="reportSection">
+        <!-- Seção para exibir o relatório de compras -->
             <h2>Relatório de Compras</h2>
             <table id="purchaseList">
+            <!-- Tabela para listar as compras -->
                 <thead>
                     <tr>
                         <th>Nome do Item</th>
@@ -89,12 +175,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Linhas de compras serão preenchidas aqui -->
                 </tbody>
             </table>
-            <div id="summary"></div>
+            
+            <div id="summary">Total de Itens: 0 | Valor Total: R$ 0.00</div>
+            <!-- Resumo que exibe total de itens e valor total -->
         </div>
     </div>
-    <script src="JS/script.js"></script>
-    <script src="JS/script-test.js"></script>
+    
+    <!-- Scripts JavaScript para funcionalidades da aplicação -->
+    <script src="JS/storage.js"></script>
+    <script src="JS/form.js"></script>
+    <script src="JS/filter.js"></script>
+    <script src="JS/ui.js"></script>
+    <script src="JS/carousel.js"></script> <!-- Script específico para o carrossel -->
 </body>
+
 </html>

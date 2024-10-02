@@ -2,6 +2,7 @@
 
 // Função para adicionar compras de teste
 function addTestPurchases() {
+    // Array de compras de teste, cada objeto representa uma compra
     const testPurchases = [
         { item: "Camiseta", value: 49.90, location: "Loja A", date: "2024-09-10", paymentMethod: "Cartão de Crédito" },
         { item: "Calça", value: 89.90, location: "Loja B", date: "2024-09-15", paymentMethod: "Dinheiro" },
@@ -10,23 +11,26 @@ function addTestPurchases() {
         { item: "Relógio", value: 300.00, location: "Loja D", date: "2024-09-25", paymentMethod: "Pix" }
     ];
 
+    // Seleciona o formulário de compras pelo ID
     const purchaseForm = document.getElementById('purchaseForm');
 
+    // Itera sobre cada compra no array de compras de teste
     testPurchases.forEach(purchase => {
-        // Preenche o formulário
-        purchaseForm[0].value = purchase.item;
-        purchaseForm[1].value = purchase.value;
-        purchaseForm[2].value = purchase.location;
-        purchaseForm[3].value = purchase.date;
-        purchaseForm[4].value = purchase.paymentMethod;
+        // Preenche o formulário com os dados da compra
+        purchaseForm[0].value = purchase.item; // Campo do item
+        purchaseForm[1].value = purchase.value; // Campo do valor
+        purchaseForm[2].value = purchase.location; // Campo da localização
+        purchaseForm[3].value = purchase.date; // Campo da data
+        purchaseForm[4].value = purchase.paymentMethod; // Campo do método de pagamento
 
-        // Envia o formulário
+        // Envia o formulário, disparando o evento 'submit'
         purchaseForm.dispatchEvent(new Event('submit'));
     });
 }
 
 // Função para aplicar filtros de teste
 function applyTestFilters() {
+    // Seleciona os filtros pelo ID
     const monthFilter = document.getElementById('monthFilter');
     const locationFilter = document.getElementById('locationFilter');
     const paymentFilter = document.getElementById('paymentFilter');
@@ -34,22 +38,22 @@ function applyTestFilters() {
     const maxValueInput = document.getElementById('maxValue');
     const applyFiltersButton = document.getElementById('applyFilters');
 
-    // Exemplo: filtra por mês de setembro e forma de pagamento "Dinheiro"
-    monthFilter.value = "9"; // Setembro
-    locationFilter.value = ""; // Todos os locais
-    paymentFilter.value = "Dinheiro"; // Filtra por "Dinheiro"
+    // Define os valores dos filtros para aplicar
+    monthFilter.value = "9"; // Filtra pelo mês de setembro (mês 9)
+    locationFilter.value = ""; // Filtra por todos os locais
+    paymentFilter.value = "Dinheiro"; // Filtra por pagamentos em "Dinheiro"
     minValueInput.value = ""; // Sem valor mínimo
     maxValueInput.value = ""; // Sem valor máximo
 
-    // Aplica os filtros
+    // Clica no botão para aplicar os filtros
     applyFiltersButton.click();
 }
 
-// Testa o sistema
+// Função principal para testar o sistema
 function testSystem() {
-    addTestPurchases();
-    applyTestFilters();
+    addTestPurchases(); // Chama a função para adicionar compras de teste
+    applyTestFilters(); // Chama a função para aplicar os filtros de teste
 }
 
-// Chama a função de teste quando a página estiver carregada
+// Adiciona um listener que chama a função de teste quando a página é carregada
 document.addEventListener('DOMContentLoaded', testSystem);

@@ -1,0 +1,43 @@
+/* Estilos gerais da tabela */
+table {
+    width: 100%; /* Tabela ocupa toda a largura do contêiner */
+    border-collapse: collapse; /* Remove espaços entre bordas de células */
+    margin-top: 15px; /* Espaço acima da tabela */
+}
+
+/* Estilos para cabeçalhos e células da tabela */
+th, td {
+    padding: 12px; /* Espaçamento interno para conforto visual */
+    text-align: left; /* Alinha texto à esquerda */
+    border: 2px solid var(--color-secondary); /* Cor da borda usando a cor secundária */
+    overflow: hidden; /* Oculta conteúdo que excede o tamanho da célula */
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-overflow: ellipsis; /* Adiciona reticências para texto que não cabe */
+    max-width: 150px; /* Largura máxima para células */
+}
+
+/* Estilos específicos para cabeçalhos da tabela */
+th {
+    background-color: var(--color-primary); /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Transforma texto em maiúsculas */
+}
+
+/* Estilos para linhas pares da tabela */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+}
+
+/* Estilos para linhas ao passar o mouse */
+tr:hover {
+    background-color: var(--color-warning); /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para o resumo da tabela */
+#summary {
+    margin-top: 10px; /* Espaço acima do resumo */
+    font-size: 1.2rem; /* Tamanho da fonte do resumo */
+    color: var(--color-secondary); /* Cor do texto do resumo */
+}

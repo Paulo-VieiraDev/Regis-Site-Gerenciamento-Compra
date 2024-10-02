@@ -1,0 +1,56 @@
+/* Estilos do carrossel */
+.carousel {
+    position: relative; /* Posiciona o carrossel em relação ao seu contêiner */
+    overflow: hidden; /* Oculta partes do carrossel que estão fora da área visível */
+    width: 300px; /* Largura do carrossel; ajuste conforme necessário */
+    margin: auto; /* Centraliza o carrossel horizontalmente */
+}
+
+/* Contêiner interno do carrossel */
+.carousel-inner {
+    display: flex; /* Usa flexbox para organizar os itens em linha */
+    transition: transform 0.5s ease; /* Transição suave para movimento dos itens */
+}
+
+/* Estilo de cada item no carrossel */
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa 100% da largura do carrossel */
+    text-align: center; /* Centraliza o texto dentro do item */
+    padding: 0; /* Remove o padding para evitar deslocamento */
+}
+
+/* Estilo das imagens das ofertas */
+.offer-image {
+    width: 180px; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s; /* Transição suave ao aplicar transformações */
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+.offer-image:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+/* Estilo do nome da loja */
+.store-name {
+    font-weight: bold; /* Destaca o nome da loja com fonte em negrito */
+    color: var(--color-secondary); /* Usa a cor secundária definida */
+    margin: 10px 0; /* Espaçamento acima e abaixo do nome */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte para maior legibilidade */
+}
+
+/* Estilo do preço original (riscado) */
+.original-price {
+    text-decoration: line-through; /* Aplica um risco no preço original */
+    color: var(--color-danger); /* Usa a cor vermelha para indicar o preço original */
+    margin: 5px 0; /* Espaçamento acima e abaixo do preço original */
+    font-size: 1rem; /* Tamanho da fonte para o preço original */
+}
+
+/* Estilo do preço promocional */
+.discounted-price {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte para destacar o preço promocional */
+    color: var(--color-success); /* Usa a cor verde para indicar o preço promocional */
+    font-weight: bold; /* Destaca o preço promocional com fonte em negrito */
+    margin: 5px 0; /* Espaçamento acima e abaixo do preço promocional */
+}

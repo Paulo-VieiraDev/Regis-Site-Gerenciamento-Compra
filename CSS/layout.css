@@ -1,0 +1,32 @@
+/* Estilos para o contêiner da grade */
+.grid-container {
+    display: grid; /* Usa grid para organizar os itens */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
+    gap: 20px; /* Espaço entre os itens da grade para melhor separação visual */
+}
+
+/* Estilos para as seções */
+.section {
+    padding: 20px; /* Espaçamento interno para conforto visual */
+    border: 2px solid var(--color-secondary); /* Cor da borda da seção usando a cor secundária */
+    border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+    display: flex; /* Usar flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: stretch; /* Estica os itens filhos para preencher a largura disponível */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+}
+
+/* Estilos específicos para a seção de relatório */
+#reportSection {
+    margin-top: 20px; /* Espaço acima do relatório para separação visual */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid var(--color-secondary); /* Cor da borda do relatório */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: flex; /* Usar flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza o conteúdo do relatório */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+}

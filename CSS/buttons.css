@@ -1,0 +1,60 @@
+/* Estilo geral dos botões */
+button {
+    padding: 12px; /* Espaçamento interno do botão */
+    background: var(--color-accent); /* Cor de fundo padrão do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 10px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Muda o cursor para mão ao passar sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    transition: background 0.3s, transform 0.3s; /* Transição suave para cor de fundo e transformação */
+    width: 100%; /* Define o botão para ocupar toda a largura disponível */
+    margin-bottom: 15px; /* Adiciona espaço abaixo dos botões */
+}
+
+/* Efeito ao passar o mouse sobre os botões padrão */
+button:hover {
+    background: var(--color-warning); /* Muda a cor ao passar o mouse */
+}
+
+/* Estilo específico para o botão de excluir */
+.button-excluir {
+    background: var(--color-danger); /* Cor de fundo para o botão de excluir */
+}
+
+/* Efeito ao passar o mouse sobre o botão de excluir */
+.button-excluir:hover {
+    background: var(--color-danger-darker); /* Muda a cor ao passar o mouse para excluir */
+}
+
+/* Estilo para o container de botões de filtro */
+.filter-buttons {
+    display: flex; /* Organiza os botões em uma linha usando flexbox */
+    justify-content: space-between; /* Espaço igual entre os botões */
+}
+
+/* Estilo dos botões dentro do container de filtros */
+.filter-buttons button {
+    flex: 1; /* Faz os botões ocuparem o mesmo espaço disponível */
+    margin-right: 10px; /* Adiciona espaço à direita dos botões */
+}
+
+/* Remove o espaço à direita do último botão */
+.filter-buttons button:last-child {
+    margin-right: 0; /* Sem margem à direita para o último botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão Resetar Filtro */
+#resetFilters:hover {
+    background: var(--color-danger); /* Cor ao passar o mouse para resetar */
+}
+
+/* Efeito ao passar o mouse sobre o botão Aplicar Filtro */
+#applyFilters:hover {
+    background: var(--color-success); /* Verde ao passar o mouse para aplicar filtro */
+}
+
+/* Efeito ao passar o mouse sobre o botão Adicionar Compra */
+button[type="submit"]:hover {
+    background: var(--color-success); /* Verde ao passar o mouse para adicionar compra */
+}

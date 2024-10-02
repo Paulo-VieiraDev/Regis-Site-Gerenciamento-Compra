@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Definição de variáveis de cor e fonte */
+:root {
+    /* Cores de fundo */
+    --color-bg: #fefae0;          /* Cor de fundo geral */
+    --color-container: #ffffff;   /* Cor do container */
+
+    /* Cores principais */
+    --color-primary: #606c38;     /* Cor primária */
+    --color-secondary: #283618;   /* Cor secundária */
+
+    /* Cores de alerta e destaque */
+    --color-warning: #dda15e;     /* Cor de alerta */
+    --color-accent: #bc6c25;      /* Cor de destaque */
+
+    /* Cores de perigo */
+    --color-danger: #e63946;      /* Vermelho vibrante para exclusão */
+    --color-danger-dark: #a60000; /* Vermelho escuro para hover */
+    --color-danger-darker: #7f0000; /* Vermelho mais escuro para hover */
+
+    /* Cores de sucesso */
+    --color-success: #4CAF50;     /* Verde para ações bem-sucedidas */
+
+    /* Fonte */
+    --font-family: "Poppins", sans-serif; /* Fonte utilizada na página */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: var(--font-family); /* Aplica a fonte definida no root */
+    background-color: var(--color-bg); /* Define a cor de fundo da página */
+    margin: 0; /* Remove margens padrão do body */
+    padding: 20px; /* Adiciona um padding ao redor do conteúdo */
+}
+
+/* Estilo do container principal */
+.container {
+    width: 95%; /* Largura do container em 95% da tela */
+    max-width: 1200px; /* Largura máxima do container */
+    margin: auto; /* Centraliza o container */
+    background: var(--color-container); /* Define a cor de fundo do container */
+    padding: 30px; /* Adiciona padding interno ao container */
+    border-radius: 15px; /* Arredonda as bordas do container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Adiciona sombra ao container */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os filhos em coluna */
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    color: white; /* Define a cor do texto do título */
+    font-size: 2.5rem; /* Define o tamanho da fonte do título */
+    margin-bottom: 10px; /* Adiciona margem abaixo do título */
+    padding: 20px; /* Adiciona padding interno ao título */
+    background-color: var(--color-primary); /* Define a cor de fundo do título */
+    border-radius: 10px; /* Arredonda as bordas do título */
+    text-transform: uppercase; /* Transforma o texto do título em maiúsculas */
+}
+
+/* Estilo da descrição */
+.description {
+    text-align: center; /* Centraliza o texto da descrição */
+    color: var(--color-secondary); /* Define a cor do texto da descrição */
+    font-size: 1.2rem; /* Define o tamanho da fonte da descrição */
+    margin-bottom: 20px; /* Adiciona margem abaixo da descrição */
+    font-style: italic; /* Aplica estilo itálico ao texto da descrição */
+}
